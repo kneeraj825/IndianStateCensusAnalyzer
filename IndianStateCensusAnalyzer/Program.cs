@@ -10,13 +10,6 @@ namespace IndianStateCensusAnalyzer
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Indian State Census Analyzer");
-            IndianStateCensus abs = new IndianStateCensus();
-            IEnumerable<string> iterating = abs.CsvReader();
-            foreach (string finalPrint in iterating)
-            {
-                Console.WriteLine(finalPrint);
-            }
-
         }
     }
 }

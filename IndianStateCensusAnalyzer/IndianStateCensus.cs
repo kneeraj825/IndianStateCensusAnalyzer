@@ -5,7 +5,7 @@ using System.Text;
 
 namespace IndianStateCensusAnalyzer
 {
-    class IndianStateCensus
+    public class IndianStateCensus
     {
         //Method to return number of record count
         public static int countOfRecord(string path)

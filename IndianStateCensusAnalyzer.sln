@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndianStateCensusAnalyzer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indian_State_Census_Analyzer_Test", "Indian_State_Census_Analyzer_Test\Indian_State_Census_Analyzer_Test.csproj", "{1A925BB3-2844-4B52-A23B-6518A06CF801}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indian_State_Census_Information_Test", "Indian_State_Census_Information_Test\Indian_State_Census_Information_Test.csproj", "{5EB5F660-E89F-42CF-92F2-3AD66F2656E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1A925BB3-2844-4B52-A23B-6518A06CF801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A925BB3-2844-4B52-A23B-6518A06CF801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A925BB3-2844-4B52-A23B-6518A06CF801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB5F660-E89F-42CF-92F2-3AD66F2656E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB5F660-E89F-42CF-92F2-3AD66F2656E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB5F660-E89F-42CF-92F2-3AD66F2656E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB5F660-E89F-42CF-92F2-3AD66F2656E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
