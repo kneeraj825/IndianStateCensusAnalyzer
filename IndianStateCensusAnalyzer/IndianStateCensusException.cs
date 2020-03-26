@@ -6,12 +6,21 @@ namespace IndianStateCensusAnalyzer
 {
     class IndianStateCensusException :Exception
     {
-            string message;
-        public IndianStateCensusException(string message)
-            {
-                this.message = message;
-            }
-            public override string Message
+        private string message;
+        public Exception type;
+        public enum Exception
+        {
+            File_Not_Found, File_Format_Incorrect
+        }
+        public IndianStateCensusException(string _message,Exception _type)
+        {
+            this.message = _message;
+            this.type = _type;
+        }
+        public IndianStateCensusException(string message) : base(message)
+        {
+        }
+        public override string Message
             {
                 get
                 {
