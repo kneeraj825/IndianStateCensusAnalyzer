@@ -10,9 +10,8 @@ namespace Indian_State_Census_Information_Test
         [Test]
         public void indianStateCensusTest_forNumberOfRecords()
         {
-            IndianStateCensus indianstateCensus = new IndianStateCensus();
-            int numberOfRecords = IndianStateCensus.countOfRecord(path);
-            Assert.AreEqual(numberOfRecords, 29);
+         
+            Assert.AreEqual(IndianStateCensus.countOfRecord(path), 29);
         }
 
     }
