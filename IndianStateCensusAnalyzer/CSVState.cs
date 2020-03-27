@@ -8,7 +8,7 @@ namespace IndianStateCensusAnalyzer
     public class CSVState
     { 
 
-        public static int numberOfRecord(string path)
+        public static int numberOfRecordStateCode(string path)
         {
             try
             {
@@ -19,7 +19,7 @@ namespace IndianStateCensusAnalyzer
                 {
                     count++;
                 }
-                return count - 1;
+                return count ;
             }
             catch (IndianStateCensusException)
             {

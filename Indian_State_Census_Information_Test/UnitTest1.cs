@@ -11,12 +11,17 @@ namespace Indian_State_Census_Information_Test
         [Test]
         public void indianStateCensusTest_forNumberOfRecords()
         {
-            Assert.AreEqual(CSVState.numberOfRecord(path), 37);
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path), 37);
         }
         [Test]
         public void indianStateCensusTest_forNumberOfRecordsMatch()
         {
-            Assert.AreEqual(CSVState.numberOfRecord(path), 38);
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path), 38);
+        }
+        [Test]
+        public void indianStateCensusTest_If_Path_Is_Incorrect_Return_Custom_Exception()
+        {
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path),"File Not Found");
         }
 
     }
