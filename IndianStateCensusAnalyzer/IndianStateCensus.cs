@@ -13,7 +13,11 @@ namespace IndianStateCensusAnalyzer
                 //Exception handling
                 try
                 {
-                    if (path != "C:/Users/NK/Downloads/StateCode.csv")
+                if (Path.GetExtension(path) != ".csv")
+                {
+                    throw new IndianStateCensusException("File format is incorrect", IndianStateCensusException.Exception.File_Format_Incorrect);
+                }
+                if (path != "C:/Users/NK/Downloads/StateCode.csv")
                     {
                         //Throw Exception If File Path Not Match
 

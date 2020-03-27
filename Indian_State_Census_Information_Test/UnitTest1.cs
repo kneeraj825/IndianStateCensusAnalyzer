@@ -23,6 +23,11 @@ namespace Indian_State_Census_Information_Test
         {
             Assert.AreEqual(CSVState.numberOfRecordStateCode(path),"File Not Found");
         }
+        [Test]
+        public void If_Path_Is_InCorrect_Return_Custom_Exection()
+        {
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path),"File Format Is Incorrect");
+        }
 
     }
 }
