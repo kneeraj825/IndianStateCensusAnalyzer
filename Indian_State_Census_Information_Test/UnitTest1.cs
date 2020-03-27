@@ -11,9 +11,13 @@ namespace Indian_State_Census_Information_Test
         [Test]
         public void indianStateCensusTest_forNumberOfRecords()
         {
-           CSVState csvstate = new CSVState();
             Assert.AreEqual(CSVState.numberOfRecord(path), 37);
         }
-       
+        [Test]
+        public void indianStateCensusTest_forNumberOfRecordsMatch()
+        {
+            Assert.AreEqual(CSVState.numberOfRecord(path), 38);
+        }
+
     }
 }
