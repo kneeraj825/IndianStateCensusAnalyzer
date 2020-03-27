@@ -35,5 +35,12 @@ namespace Indian_State_Census_Information_Test
             IndianStateCensus indiancensus2 = new IndianStateCensus(actualPath2);
             Assert.AreEqual(indiancensus2.countOfRecord(), "Deliiter Is Incorrect");
         }
+        [Test]
+        public void File_Is_Correct_But_Header_Is_Incorrect()
+        {
+            string actualPath3 = "C:/Users/NK/Downloads/StateCensusData.csv";
+            IndianStateCensus indiancensus3 = new IndianStateCensus(actualPath3);
+            Assert.AreEqual(indiancensus3.countOfRecord(), "Header Is Incorrect");
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace IndianStateCensusAnalyzer
         public Exception type;
         public enum Exception
         {
-            File_Not_Found, File_Format_Incorrect, DELIMITER_INCORRECT
+            File_Not_Found, File_Format_Incorrect, DELIMITER_INCORRECT,HEADER_INCORRECT
         }
         public IndianStateCensusException(Exception type, string message)
         {
