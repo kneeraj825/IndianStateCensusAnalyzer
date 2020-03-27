@@ -4,28 +4,30 @@ using System.Text;
 
 namespace IndianStateCensusAnalyzer
 {
-    class IndianStateCensusException :Exception
+    public class IndianStateCensusException : Exception
     {
-        private string message;
+        string message;
         public Exception type;
         public enum Exception
         {
-            File_Not_Found, File_Format_Incorrect
+            File_Not_Found, File_Format_Incorrect, DELIMITER_INCORRECT
         }
-        public IndianStateCensusException(string _message,Exception _type)
+        public IndianStateCensusException(Exception type, string message)
         {
-            this.message = _message;
-            this.type = _type;
+            this.message = message;
+            this.type = type;
         }
-        public IndianStateCensusException(string message) : base(message)
+        public IndianStateCensusException(string message, Exception type) : base(message)
         {
+            this.message = message;
+            this.type = type;
         }
         public override string Message
+        {
+            get
             {
-                get
-                {
-                    return this.message;
-                }
+                return this.message;
             }
         }
+    }   
 }

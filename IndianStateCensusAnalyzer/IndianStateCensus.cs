@@ -7,8 +7,19 @@ namespace IndianStateCensusAnalyzer
 {
     public class IndianStateCensus
     {
-        public static object countOfRecord(string path)
+        public string path;
+        public char delimiter = ',';
+        public IndianStateCensus(string path)
         {
+            this.path = path;
+        }
+        public IndianStateCensus(string path, char delimiter)
+        {
+            this.path = path;
+            this.delimiter = delimiter;
+        }
+            public object countOfRecord()
+            {
             //Exception handling
             try
             {
@@ -23,6 +34,14 @@ namespace IndianStateCensusAnalyzer
                     throw new IndianStateCensusException( "File not found",IndianStateCensusException.Exception.File_Not_Found);
                 }
                 string[] data = File.ReadAllLines(path);
+                foreach (var element in data)
+
+                {
+                    if (!element.Contains(delimiter))
+                    {
+                        throw new IndianStateCensusException(IndianStateCensusException.Exception.DELIMITER_INCORRECT, "Delimiter is incorrect");
+                    }
+                }
                 //Total Number OF Records - 1 Records That For Header not count  
                 return data.Length - 1;
 

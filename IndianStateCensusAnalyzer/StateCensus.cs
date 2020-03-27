@@ -5,19 +5,26 @@ using System.Text;
 
 namespace IndianStateCensusAnalyzer
 {
-    class StateCensus
+    public class StateCensus
     {
         public static int getNumberOfRecords(string path)
         {
-            int count = 0;
-            string[] elements = File.ReadAllLines(path);
-            IEnumerable<string> ele = elements;
-            foreach (var element in ele)
-            {
-                count++;
-            }
-            // Return Number of count - 1 for header is not count 
-            return count - 1;
+                try
+                {
+                    //count++;
+                    int count = 0;
+                    string[] elements = File.ReadAllLines(path);
+                    IEnumerable<string> element = elements;
+                    foreach (string e in element)
+                    {
+                        count++;
+                    }
+                    return count - 1;
+                }
+                catch (IndianStateCensusException)
+                {
+                    throw new IndianStateCensusException(IndianStateCensusException.Exception.File_Not_Found, "File Not Found");
+                }
         }
     }
 }
