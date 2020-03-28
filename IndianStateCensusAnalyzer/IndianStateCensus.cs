@@ -10,6 +10,8 @@ namespace IndianStateCensusAnalyzer
         public string path;
         public char delimiter = ',';
         public string header = "SrNo,State,Name,TIN,StateCode";
+        // Deligate
+        public delegate object CSVData();
         public IndianStateCensus(string path)
         {
             this.path = path;

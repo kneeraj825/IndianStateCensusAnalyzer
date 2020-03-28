@@ -7,15 +7,6 @@ namespace IndianStateCensusAnalyzer
 {
     public class CSVState
     {
-        private string path;
-        private string v;
-
-        public CSVState(string path, string v)
-        {
-            this.path = path;
-            this.v = v;
-        }
-
         public static int numberOfRecordStateCode(string path)
         {
             try
