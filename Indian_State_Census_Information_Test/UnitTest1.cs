@@ -12,6 +12,7 @@ namespace Indian_State_Census_Information_Test
         public void indianStateCensusTest_forNumberOfRecords()
         {
             Assert.AreEqual(CSVState.numberOfRecordStateCode(path), 37);
+
         }
         [Test]
         public void indianStateCensusTest_forNumberOfRecordsMatch()
@@ -31,8 +32,13 @@ namespace Indian_State_Census_Information_Test
         [Test]
         public void If_Csv_File_Is_Correct_But_Delimiter_Is_Incorrect_Returns_Custom_Exection()
         {
-            Assert.AreEqual(CSVState.numberOfRecordStateCode(path), "Delimiter Is Incorrect");
+           // string actualpath = "C:/Users/NK/Downloads/StateCode.csv";
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path),"Delimiter Is Incorrect");
         }
-
+        [Test]
+        public void If_Csv_File_Is_Correct_But_Header_Is_Incorrect_Returns_Custom_Exection()
+        {
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path), "Header Is Incorrect");
+        }
     }
 }

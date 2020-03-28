@@ -9,6 +9,7 @@ namespace IndianStateCensusAnalyzer
     {
         public string path;
         public char delimiter = ',';
+        public string header = "SrNo,State,Name,TIN,StateCode";
         public IndianStateCensus(string path)
         {
             this.path = path;
@@ -17,6 +18,11 @@ namespace IndianStateCensusAnalyzer
         {
             this.path = path;
             this.delimiter = delimiter;
+        }
+        public IndianStateCensus(string path, string header)
+        {
+            this.path = path;
+            this.header = header;
         }
         public object numberOfRecordStateCode()
             {
@@ -34,6 +40,10 @@ namespace IndianStateCensusAnalyzer
                         throw new IndianStateCensusException("File not found", IndianStateCensusException.Exception.File_Not_Found);
                     }
                     string[] data = File.ReadAllLines(path);
+                if (data[0] != header)
+                {
+                    throw new IndianStateCensusException(IndianStateCensusException.Exception.HEADER_INCORRECT, "Header Is Incorrect");
+                }
                 foreach (var element in data)
 
                 {
