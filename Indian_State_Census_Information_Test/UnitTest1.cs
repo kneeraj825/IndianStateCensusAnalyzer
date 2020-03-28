@@ -19,14 +19,19 @@ namespace Indian_State_Census_Information_Test
             Assert.AreEqual(CSVState.numberOfRecordStateCode(path), 38);
         }
         [Test]
-        public void indianStateCensusTest_If_Path_Is_Incorrect_Return_Custom_Exception()
+        public void indianStateCensusTest_If_Path_Is_Incorrect_Returns_Custom_Exception()
         {
             Assert.AreEqual(CSVState.numberOfRecordStateCode(path),"File Not Found");
         }
         [Test]
-        public void If_Path_Is_InCorrect_Return_Custom_Exection()
+        public void If_Path_Is_InCorrect_Returns_Custom_Exection()
         {
             Assert.AreEqual(CSVState.numberOfRecordStateCode(path),"File Format Is Incorrect");
+        }
+        [Test]
+        public void If_Csv_File_Is_Correct_But_Delimiter_Is_Incorrect_Returns_Custom_Exection()
+        {
+            Assert.AreEqual(CSVState.numberOfRecordStateCode(path), "Delimiter Is Incorrect");
         }
 
     }
