@@ -9,7 +9,22 @@ namespace Indian_State_Census_Information_Test
     [TestFixture]
     public class IndianStateCensusAnalyzer
     {
-       //private string path = "C:/Users/NK/Downloads/StateCode.csv";
+        private string PathStateCode = @"C:/Users/NK/Downloads/StateCode.csv";
+
+        [Test]
+         public void indianStateCensusTest_forNumberOfRecordsMatch()
+         {
+           
+             string actualpath = "C:/Users/NK/Downloads/StateCode.csv";
+             IndianStateCensusAnalyzer indianStateCensus = new IndianStateCensusAnalyzer();
+             IndianStateCensus csv = new IndianStateCensus(actualpath);
+             //calling with deligate
+             CSVData cSVFile = new CSVData(csv.numberOfRecordStateCode);
+             int actual = (int)cSVFile();
+            int excepted = IndianStateCensus.ReadFile(PathStateCode);
+             Assert.AreEqual(CSVState.numberOfRecordStateCode(actualpath), 38);
+         }
+
         [Test]
         public void indianStateCensusTest_forNumberOfRecords()
         {

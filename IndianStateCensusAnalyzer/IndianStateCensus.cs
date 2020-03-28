@@ -62,7 +62,9 @@ namespace IndianStateCensusAnalyzer
                 }
             }
 
-
-
+        public static int ReadFile(string pathStateCode)
+        {
+            throw new NotImplementedException();
+        }
     } 
 }
